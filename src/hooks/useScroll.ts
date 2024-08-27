@@ -5,7 +5,7 @@ export default function useScroll() {
     const [scrollYPosition, setScrollYPosition] = useState<number>(0);
     const prevScrollYPosition = useRef<number>(0);
 
-    const handleScroll = () => {
+    var handleScroll = function() {
         setScrollYPosition(window.scrollY);
     };
 

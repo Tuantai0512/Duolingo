@@ -13,7 +13,7 @@ export default function Header(props: IAppProps) {
     const scrollPosition = useScroll();
 
     return (
-        <header className={`sticky top-0 w-full px-8 ${ scrollPosition != 0 ? 'shadow-[0_2px_4px_-1px_rgba(57,76,96,0.15)]' : ''} `}>
+        <header className={`fixed top-0 w-full px-8 ${ scrollPosition != 0 ? 'shadow-[0_2px_4px_-1px_rgba(57,76,96,0.15)]' : ''} `}>
             <div className='flex items-center min-h-[72px]'>
                 <nav className="flex justify-between mx-auto my-0 max-w-[988px] w-full">
                     <Link href={"/"}>
