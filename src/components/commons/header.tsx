@@ -21,7 +21,7 @@ export default function Header(props: IAppProps) {
 
     return (
         <header className={`flex flex-col justify-between pt-[70px] min-h-screen`}>
-            <div className={`fixed flex bg-white items-center min-h-[72px] px-8 top-0 w-full ${scrollPosition != 0 ? 'shadow-[0_2px_4px_-1px_rgba(57,76,96,0.15)]' : ''}`}>
+            <div className={`fixed z-10 flex bg-white items-center min-h-[72px] px-8 top-0 w-full ${scrollPosition != 0 ? 'shadow-[0_2px_4px_-1px_rgba(57,76,96,0.15)]' : ''}`}>
                 <nav className="flex justify-between mx-auto my-0 max-w-[988px] w-full">
                     <Link href={"/"}>
                         <Image
@@ -55,8 +55,12 @@ export default function Header(props: IAppProps) {
                 <div className="flex flex-col items-center">
                     <h1 className="font-bold w-[480px] max-w-[480px] text-[32px] text-[#4b4b4b] text-center">The free, fun, and effective way to learn a language!</h1>
                     <div className="flex flex-col gap-[12px] max-w-[330px] w-full mt-10">
-                        <Button>Get Started</Button>
-                        <Button variant={"ghost"}>I already have an account</Button>
+                        <Button className="w-full">
+                            Get Started
+                        </Button>
+                        <Button className="w-full" variant={"ghost"}>
+                            <span className="text-[#1cb1f6] uppercase tracking-[.8px]">I already have an account</span>
+                        </Button>
                     </div>
                 </div>
             </div>

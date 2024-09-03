@@ -3,17 +3,18 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/commons/header";
 import { META_DATA_DEFAULT } from "@/utils/constants/seo";
+import Footer from "@/components/commons/footer";
 
 const dinFont = localFont({
   src: [
     {
       path: './fonts/DINRoundPro-Light.woff2',
-      weight: '400',
+      weight: '300',
       style: 'normal',
     },
     {
       path: './fonts/DINRoundPro-Medi.woff2',
-      weight: '600',
+      weight: '500',
       style: 'normal',
     },
     {
@@ -40,6 +41,7 @@ export default function RootLayout({
       <body className={dinFont.className}>
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
