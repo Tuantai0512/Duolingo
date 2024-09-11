@@ -6,7 +6,7 @@ export interface IFooterProps {
 export default function Footer(props: IFooterProps) {
     return (
         <footer className='bg-[#58cc02] flex flex-col items-center'>
-            <div className="grid gap-[24px] grid-cols-5 max-w-[988px] pb-[64px]">
+            <div className="grid gap-[24px] lg:grid-cols-5 max-w-[988px] pb-[64px] mx-[15px]">
                 <div className="grid content-start gap-[32px]">
                     <div>
                         <div className="text-[#d7ffb8] font-bold mb-[12px]">About us</div>
@@ -160,7 +160,7 @@ export default function Footer(props: IFooterProps) {
                 </div>
             </div>
             <hr className="border-t-2  border-[#a5ed6e] w-full"/>
-            <div className="max-w-[988px] pt-[40px] pb-[64px]">
+            <div className="max-w-[988px] pt-[40px] pb-[64px] mx-[15px]">
                 <div className="text-[#d7ffb8] font-bold text-[14px] leading-[22px] mb-[16px]">Site language:</div>
                 <ul className="mx-[-12px] my-[-8px] flex flex-wrap">
                     <li className="mx-[12px] my-[8px]">

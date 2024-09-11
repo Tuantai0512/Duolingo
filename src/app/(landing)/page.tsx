@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 const feather = localFont({
-  src: './fonts/FeatherBold.woff2',
+  src: '../fonts/FeatherBold.woff2',
   display: 'swap',
 })
 
@@ -85,9 +85,9 @@ export default function Home() {
           <div className="flex flex-col max-w-[1728px] pt-[140px] py-0 pb-[96px]">
             <div className="flex flex-col items-center gap-[48px]">
               <h1
-                className={`${feather.className} text-[64px] max-w-[583px] text-[#042c60] text-center leading-tight tracking-[-.02em]`}
+                className={`${feather.className} text-[36px] lg:text-[64px] max-w-[583px] text-[#042c60] text-center leading-tight tracking-[-.02em]`}
               >learn anytime, anywhere</h1>
-              <div className="flex gap-[24px] justify-center ">
+              <div className="flex flex-col lg:flex-row gap-[24px] justify-center ">
                 <Button variant={"ghost"} size={"sm"}>
                   <div className="flex gap-[10px]">
                     <Image
@@ -118,7 +118,7 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="grid relative ml-[-220px] mt-[-340px] ">
+            <div className="grid relative ml-[-120px] md:ml-[-180px] lg:ml-[-220px] mt-[-90px] md:mt-[200px] lg:mt-[-340px]">
               <Image
                 alt="landing background"
                 src={'/images/landing_bg.svg'}
@@ -138,8 +138,8 @@ export default function Home() {
         </section>
       </div>
       <section className="bg-[#100f3e] w-full h-full py-[185px]">
-        <div className="flex justify-center items-center w-auto gap-[40px] mx-auto">
-          <div className="relative shrink-0 w-[530px] leading-0">
+        <div className="flex flex-col lg:flex-row justify-center items-center w-auto gap-[40px] mx-auto">
+          <div className="relative shrink-0 lg:w-[530px] leading-0">
             <Image
               alt="landing page 5"
               src={"/images/landing_page5.png"}
@@ -219,7 +219,7 @@ export default function Home() {
         <div className="flex items-center flex-col max-w-[1440px] overflow-hidden w-full">
           <div className="flex flex-col items-center gap-[48px] max-w-full">
             <h1
-              className={`${feather.className} text-[64px] max-w-[583px] text-[#58cc02] text-center leading-tight tracking-[-.02em]`}
+              className={`${feather.className} text-[36px] lg:text-[64px] max-w-[583px] text-[#58cc02] text-center leading-tight tracking-[-.02em]`}
             >learn anytime, anywhere</h1>
             <Button className="max-w-[330px] w-full">
               Get started
