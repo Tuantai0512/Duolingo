@@ -226,7 +226,7 @@ export default function Home() {
             </Button>
           </div>
           <div className="flex min-w-[696px] relative w-full aspect-[1448/708]">
-            <span className="absolute bottom-0 top-0 mt-[-19.9889502762%]">
+            <span className="absolute bottom-0 top-0 mt-[-19.9889502762%] z-[-10]">
               <Image
                 alt="landing background"
                 src={"/images/landing_bg3.svg"}
@@ -234,7 +234,7 @@ export default function Home() {
                 height={1060} 
               />
             </span>
-            <span className="absolute bottom-0 top-0 mt-[-19.9889502762%]">
+            <span className="absolute bottom-0 top-0 mt-[-19.9889502762%] z-[-10]">
               <Image
                 alt="background landing 4"
                 src="/images/landing_bg4.svg"

@@ -1,29 +1,28 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
-import Header from "@/components/commons/header";
+import "@/app/globals.css";
 import { META_DATA_DEFAULT } from "@/utils/constants/seo";
-import Footer from "@/components/commons/footer";
+import Sidebar from "./sidebar";
 
 const dinFont = localFont({
   src: [
     {
-      path: './fonts/DINRoundPro-Light.woff2',
+      path: '../fonts/DINRoundPro-Light.woff2',
       weight: '300',
       style: 'normal',
     },
     {
-      path: './fonts/DINRoundPro-Medi.woff2',
+      path: '../fonts/DINRoundPro-Medi.woff2',
       weight: '500',
       style: 'normal',
     },
     {
-      path: './fonts/DINRoundPro-Bold.woff2',
+      path: '../fonts/DINRoundPro-Bold.woff2',
       weight: '700',
       style: 'normal',
     },
     {
-      path: './fonts/DINRoundPro-Black.woff2',
+      path: '../fonts/DINRoundPro-Black.woff2',
       weight: '800',
       style: 'normal',
     },
@@ -31,7 +30,7 @@ const dinFont = localFont({
 })
 export const metadata: Metadata = META_DATA_DEFAULT;
 
-export default function RootLayout({
+export default function MainLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -39,9 +38,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={dinFont.className}>
-        <Header/>
-        {children}
-        <Footer/>
+        <Sidebar />
+        <main className="lg:pl-[256px] h-full">
+          <div className="h-full">
+            {children}
+          </div>
+        </main>
       </body>
     </html>
   );

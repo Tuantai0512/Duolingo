@@ -18,6 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "bg-[#ffffff] border-2 border-b-4 active:border-b-2 border-[#e5e5e5] rounded-[12px] w-max h-max font-bold hover:bg-[#e5e5e580] min-h-[46px]",
         link: "text-[#afafaf] uppercase  underline-offset-4 hover:underline font-bold tracking-[.8px]",
+        sidebar: "justify-start hover:bg-gray-100",
+        sidebarOutline: "justify-start border text-blue-500 border-blue-500 bg-blue-100",
+        nothing:"",
       },
       size: {
         default: "h-10 px-4 py-2",

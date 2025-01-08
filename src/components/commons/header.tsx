@@ -56,10 +56,14 @@ export default function Header(props: IAppProps) {
                     <h1 className="font-bold lg:w-[480px] lg:max-w-[480px] text-[32px] text-[#4b4b4b] text-center">The free, fun, and effective way to learn a language!</h1>
                     <div className="flex flex-col gap-[12px] max-w-[330px] w-full mt-10">
                         <Button className="w-full">
-                            Get Started
+                            <Link href={"/learn"}>
+                                Get Started
+                            </Link>
                         </Button>
                         <Button className="w-full" variant={"ghost"}>
-                            <span className="text-[#1cb1f6] uppercase tracking-[.8px]">I already have an account</span>
+                            <Link href={"/login"}>
+                                <span className="text-[#1cb1f6] uppercase tracking-[.8px]">I already have an account</span>
+                            </Link>
                         </Button>
                     </div>
                 </div>
