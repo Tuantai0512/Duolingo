@@ -69,12 +69,12 @@ export function Step2(props: IChangePasswordProgress) {
     }
 
     return (
-        <div>
+        <div className="w-full">
             <div className="my-[20px] mx-0">
-                <p>Vui lòng thực hiện đổi mật khẩu.</p>
+                <p className='text-center'>Vui lòng thực hiện đổi mật khẩu.</p>
             </div>
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-[375px]">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full max-w-[375px]">
                     <FormField
                         control={form.control}
                         name="code"

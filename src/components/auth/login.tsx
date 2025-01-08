@@ -54,10 +54,10 @@ export function Login() {
     }
 
     return (
-        <div>
+        <div className="flex flex-col items-center w-full">
             <h1 className="text-center text-[26px] font-bold m-[15px]">Đăng nhập</h1>
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-[375px]">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full max-w-[375px]">
                     <FormField
                         control={form.control}
                         name="email"

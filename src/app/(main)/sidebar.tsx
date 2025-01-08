@@ -21,6 +21,7 @@ export default function Sidebar (props: IAppProps) {
       <SideBarItem img="/images/mouth.svg" href='/charaters' text='Phát âm'/>
       <SideBarItem img="/images/shield.svg" href='/leaderboard' text='Bảng xếp hạng'/>
       <SideBarItem img="/images/chest.svg" href='/quests' text='Nhiệm vụ'/>
+      <SideBarItem img="/images/ellipsis.svg" href='/quests' text='Xem thêm'/>
     </div>
   );
 }

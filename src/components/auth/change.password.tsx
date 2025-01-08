@@ -18,7 +18,7 @@ export function ChangePassword() {
 
     return (
         <>
-            <Progress value={progress} className="w-[60%]" />
+            <Progress value={progress} className="w-full md:w-[60%]" />
             {progress == 0 && 
                 <Step1 setProgress={setProgress} userEmail={userEmail} setUserEmail={setUserEmail}/>
             }

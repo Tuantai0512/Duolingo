@@ -58,10 +58,10 @@ export function Step1(props: IChangePasswordProgress) {
     return (
         <div className="flex flex-col items-center">
             <div className="my-[20px] mx-0">
-                <p>Để thực hiện thay đổi mật khẩu, vui lòng nhập email tài khoản của bạn để nhận mã code.</p>
+                <p className='text-center'>Để thực hiện thay đổi mật khẩu, vui lòng nhập email tài khoản của bạn để nhận mã code.</p>
             </div>
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-[375px]">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full max-w-[375px]">
                     <FormField
                         control={form.control}
                         name="email"

@@ -7,7 +7,7 @@ export default function Step3(props: IChangePasswordProgress) {
     return (
         <div>
             <div className="my-[20px] mx-0">
-                <p>Tài khoản của bạn đã được thay đổi mật khẩu thành công. Vui lòng đăng nhập lại</p>
+                <p className='text-center'>Tài khoản của bạn đã được thay đổi mật khẩu thành công. Vui lòng đăng nhập lại</p>
             </div>
             <Link href="/login">
                 <Button className="bg-[#1cb0f6] border-[#1899d6] hover:bg-[#1cb0f6cc] w-full" type="submit">Đăng nhập</Button>
