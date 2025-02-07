@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@/app/globals.css";
 import { META_DATA_DEFAULT } from "@/utils/constants/seo";
-import Sidebar from "./sidebar";
+import MobileHeader from "@/components/learn/mobile.header";
+import Sidebar from "@/components/learn/sidebar";
 
 const dinFont = localFont({
   src: [
@@ -38,8 +39,9 @@ export default function MainLayout({
   return (
     <html lang="en">
       <body className={dinFont.className}>
-        <Sidebar />
-        <main className="lg:pl-[256px] h-full">
+        <Sidebar className="hidden lg:block border-r"/>
+        <MobileHeader />
+        <main className="lg:pl-[256px] h-full pt-[25px] lg:pt-0">
           <div className="h-full">
             {children}
           </div>

@@ -3,12 +3,15 @@ import * as React from 'react';
 import SideBarItem from './sidebar-item';
 
 export interface IAppProps {
+  className: string
 }
 
 export default function Sidebar (props: IAppProps) {
+  
+  const { className } = props;
 
   return (
-    <div className='hidden lg:block w-[256px] px-4 h-full fixed'>
+    <div className={`${className} lg:w-[256px] px-4 h-full lg:fixed `}>
       <div className='px-4 py-8'>
         <Image 
           alt="Duolingo"

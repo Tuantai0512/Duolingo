@@ -3,6 +3,7 @@ import Credentials from "next-auth/providers/credentials"
 import { InActiveAccountError, InvalidEmailPasswordError } from "./utils/errors"
 import { User } from "./models/next-auth"
 import { sendLogin } from "./services/auth.services"
+import { getIsTokenValid } from "./utils/helper"
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
     providers: [
@@ -39,6 +40,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             },
         }),
     ],
+    session: {
+        strategy: 'jwt',
+        maxAge: 24 * 60 * 60 // 1 day
+    },
     pages: {
         signIn: "/login",
     },
@@ -55,6 +60,17 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         },
         authorized: async ({ auth }) => {
             // Logged in users are authenticated, otherwise redirect to login page
+            
+            //get token
+            const token = auth?.user.access_token
+
+            if(token){
+                const isTokenValid = getIsTokenValid(token);
+    
+                if (!isTokenValid) {
+                    return false;
+                }
+            }
             return !!auth
         },
     },

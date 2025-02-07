@@ -16,6 +16,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { authenticate } from "@/actions/auth"
 import Link from "next/link"
+import { toast } from "sonner"
 
 const formSchema = z.object({
     email: z.string().min(1, {
@@ -47,7 +48,9 @@ export function Login() {
         const{ email, password } = values;
         const res = await authenticate(email, password);
         if (res?.error) {
-            console.log(res?.error)
+            toast("Call APIs error", {
+                description: res?.error,
+            })
         } else {
             router.push('/learn');
         }
