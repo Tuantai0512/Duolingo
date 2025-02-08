@@ -3,7 +3,6 @@ import * as React from 'react';
 import Image from 'next/image'
 
 export interface ICardProps {
-    key: string,
     id: string,
     title: string,
     imageSrc: string,
@@ -12,17 +11,14 @@ export interface ICardProps {
     active: boolean
 }
 
-export default function Card(props: ICardProps) {
-    
-    const {
-        key,
-        id,
-        imageSrc,
-        title,
-        onClick,
-        disabled,
-        active
-    } = props
+export default function Card({
+    id,
+    imageSrc,
+    title,
+    onClick,
+    disabled,
+    active
+}: ICardProps) {
 
     return (
         <div

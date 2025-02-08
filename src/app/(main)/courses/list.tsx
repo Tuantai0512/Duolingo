@@ -1,26 +1,41 @@
 "use client"
-import * as React from 'react';
+import { useTransition } from 'react';
 import Card from './card';
+import { useRouter } from 'next/navigation';
+import { upsertUserProgress } from '@/actions/user-progress';
 
 export interface IListProps {
-    courses: any,
+    courses: IBackendRes<ICourse[]>,
     activeCourseId: string
 }
 
-export default function List(props: IListProps) {
+export default function List({ courses, activeCourseId }: IListProps) {
 
-    const { courses, activeCourseId } = props;
+    const router = useRouter();
+    const [pending, startTransition] = useTransition();
+
+    const onClick = (id: string) => {
+        if(pending) return;
+
+        if(id === activeCourseId) {
+            return router.push("/learn")
+        }
+
+        startTransition(() => {
+            upsertUserProgress(id)
+        })
+    }
 
     return (
         <div className='pt-6 grid grid-cols-2 gap-[8px] lg:grid-cols-[repeat(auto-fill,minmax(210px,1fr))]'>
-            {courses.data.map((course: any) => {
+            {courses.data?.map((course: ICourse) => {
                 return(
                     <Card 
                         key={course._id}
                         id={course._id}
                         title={course.title}
                         imageSrc={course.imageSrc}
-                        onClick={() => {}}
+                        onClick={onClick}
                         disabled={false}
                         active={course._id === activeCourseId}
                     />

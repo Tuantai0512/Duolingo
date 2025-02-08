@@ -1,21 +1,21 @@
 import { getCourses } from "@/services/course.services";
 import List from "./list";
+import { getUserProgress } from "@/services/user-progress.services";
 
-export interface ICoursePageProps {
-}
+export default async function CoursePage() {
 
-export default async function CoursePage (props: ICoursePageProps) {
-
-  const courses = await getCourses();
+  const coursesData = getCourses();
+  const userProgressData = getUserProgress();
+  const [courses, userProgress] = await Promise.all([coursesData, userProgressData]);
 
   return (
     <div className='h-full max-w-[912px] px-3 mx-auto lg:pt-[20px]'>
       <h1 className='text-2xl font-bold text-neutral-700'>
         Language Courses
       </h1>
-      <List 
+      <List
         courses={courses}
-        activeCourseId={'6791a2a37fc405edd310f948'}
+        activeCourseId={userProgress?.data.activeCourseId}
       />
     </div>
   );

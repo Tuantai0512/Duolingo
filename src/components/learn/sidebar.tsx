@@ -6,9 +6,7 @@ export interface IAppProps {
   className: string
 }
 
-export default function Sidebar (props: IAppProps) {
-  
-  const { className } = props;
+export default function Sidebar ({ className }: IAppProps) {
 
   return (
     <div className={`${className} lg:w-[256px] px-4 h-full lg:fixed `}>

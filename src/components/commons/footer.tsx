@@ -1,9 +1,6 @@
 import Link from "next/link";
 
-export interface IFooterProps {
-}
-
-export default function Footer(props: IFooterProps) {
+export default function Footer() {
     return (
         <footer className='bg-[#58cc02] flex flex-col items-center'>
             <div className="grid gap-[24px] lg:grid-cols-5 max-w-[988px] pb-[64px] mx-[15px]">

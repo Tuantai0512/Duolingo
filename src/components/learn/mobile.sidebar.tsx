@@ -7,10 +7,7 @@ import {
 import { Menu } from "lucide-react";
 import Sidebar from "./sidebar";
 
-export interface IMobileSidebarProps {
-}
-
-export default function MobileSidebar (props: IMobileSidebarProps) {
+export default function MobileSidebar () {
   return (
     <Sheet>
       <SheetTrigger>

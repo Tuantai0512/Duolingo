@@ -3,7 +3,7 @@ import { IChangePasswordProgress } from '@/models/next-auth';
 import Link from 'next/link';
 import * as React from 'react';
 
-export default function Step3(props: IChangePasswordProgress) {
+export default function Step3() {
     return (
         <div>
             <div className="my-[20px] mx-0">

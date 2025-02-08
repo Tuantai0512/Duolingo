@@ -30,11 +30,17 @@ declare global {
     }
 
     interface ILogin {
-        user : {
+        user: {
             email: string,
             _id: string,
             name?: string
         },
         access_token: string
+    }
+
+    interface ICourse {
+        _id: string,
+        title: string,
+        imageSrc: string
     }
 }

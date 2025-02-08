@@ -8,10 +8,7 @@ export const metadata = {
     description: 'Đăng Ký vào Duolingo',
 }
 
-export interface IAppProps {
-}
-
-export default function RegisterPage(props: IAppProps) {
+export default function RegisterPage() {
     return (
         <div>
             <NavButton link="/login" label='Đăng nhập' />

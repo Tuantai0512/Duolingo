@@ -14,7 +14,7 @@ import {
 export interface IAppProps {
 }
 
-export default function Header(props: IAppProps) {
+export default function Header() {
 
     /* Get scroll Y position on site  */
     const scrollPosition = useScroll();

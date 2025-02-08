@@ -11,9 +11,12 @@ export interface ISideBarItemProps {
   text: string
 }
 
-export default function SideBarItem(props: ISideBarItemProps) {
+export default function SideBarItem({
+  img,
+  href,
+  text
+}: ISideBarItemProps) {
 
-  const { img, href, text } = props;
   const pathname = usePathname();
   const active = pathname === href;
 

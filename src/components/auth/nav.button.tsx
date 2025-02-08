@@ -7,8 +7,7 @@ export interface INavButtonProps {
     label: string;
 }
 
-export default function NavButton(props: INavButtonProps) {
-    const { link, label } = props;
+export default function NavButton({ link, label }: INavButtonProps) {
     return (
         <div className='flex flex-row-reverse'>
             <Link href={link}>
